@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <project name="jamesbrock0/Atom_L/device_tree" path="device/Unihertz/Atom_L" remote="github" revision="master" />
+  <project name="jamesbrock0/Atom_L" path="device/Unihertz/Atom_L" remote="github" revision="master" />
 
 <!-- For OpenGapps
   <remote name="opengapps" fetch="https://github.com/opengapps/" />

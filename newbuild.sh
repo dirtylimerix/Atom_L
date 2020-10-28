@@ -24,8 +24,8 @@ cp roomservice.xml $LOCAL_MANIFEST_DIR
 
 cd $LINEAGE_DIR
 repo sync --force-sync
+mv device/Unihertz/Atom_L/device_tree/* device/Unihertz/Atom_L
 cd $TOP_DIR
-
 
 mkdir -p $VENDOR_DIR
 cp latest_ROM.zip $VENDOR_DIR

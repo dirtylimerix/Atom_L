@@ -42,3 +42,13 @@ sudo umount system/vendor
 sudo umount system
 cd $TOP_DIR
 
+cd $LINEAGE_DIR
+source build/envsetup.sh
+breakfast Atom_L
+ccache -M 50G
+croot
+brunch Atom_L
+cp $LINEAGE_DIR/out/target/product/Atom_L/lineage-17.1-*.zip $TOP_DIR/releases
+cd $TOP_DIR
+
+

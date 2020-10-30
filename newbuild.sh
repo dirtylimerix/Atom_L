@@ -1,7 +1,4 @@
-#!/bin/bash
-
-# Run with "sudo -u username command" ??
-
+#!/bin/bashs
 
 export TOP_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 export BUILD_DIR=$TOP_DIR/build

@@ -29,10 +29,10 @@ TARGET_SCREEN_HEIGHT := 1136
 TARGET_SCREEN_WIDTH := 640
 
 # Build info
-BUILD_FINGERPRINT := "Unihertz/Atom_L/Atom_L:10/QP1A.190711.020/root.20200312.145449:user/release-keys"
+BUILD_FINGERPRINT := "Unihertz/Atom_L/Atom_L:10/QP1A.190711.020/root.20200312.145449:userdebug/release-keys"
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE=Atom_L \
     PRODUCT_NAME=Atom_L \
-    PRIVATE_BUILD_DESC="Atom_L-user 10 QP1A.190711.020 root.20200312.145449 release-keys"
+    PRIVATE_BUILD_DESC="Atom_L-userdebug 10 QP1A.190711.020 root.20200312.145449 release-keys"
     
 PRODUCT_GMS_CLIENTID_BASE := android-unihertz

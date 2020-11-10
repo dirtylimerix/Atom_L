@@ -75,6 +75,7 @@ cd $TARGET_DIR
 DATEVAL=`ls lineage-17.1-*-UNOFFICIAL-Atom_L.zip | awk -F '[-.]' '{print $4}'`
 cd $TOP_DIR
 
+mkdir -p $TOP_DIR/releases
 mkdir $TOP_DIR/releases/$DATEVAL
 mv $LINEAGE_DIR/out/target/product/Atom_L/lineage-17.1-$DATEVAL-UNOFFICIAL-Atom_L.zip $TOP_DIR/releases/$DATEVAL
 mv $LINEAGE_DIR/out/target/product/Atom_L/lineage-17.1-$DATEVAL-UNOFFICIAL-Atom_L.zip.md5sum $TOP_DIR/releases/$DATEVAL

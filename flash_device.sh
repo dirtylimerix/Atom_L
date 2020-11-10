@@ -7,6 +7,34 @@ WARNING!!!
 
 "
 
+export TOP_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+export RELEASE_DIR=$TOP_DIR/releases
+
+idx=0
+for dir in $RELEASE_DIR/*/;
+do
+  RELEASES[$idx]=$dir;
+  (( idx++ ));
+done
+#printf '%s\n' "${RELEASES[@]}"
+
+echo "
+
+Which of the following releases would you like to flash to the device?
+
+"
+idx=0
+for rel in "${RELEASES[@]}"
+do
+  echo "$idx ) $rel";
+  (( idx++ ));
+done
+
+read -p "> " RELSEL
+
+RELSEL_DIR=${RELEASES[$RELSEL]}
+RELDATE=`basename $RELSEL_DIR`
+
 echo "
 ==============================
           UNLOCKING
@@ -78,14 +106,25 @@ echo "
 
 > Run <fastboot flash recovery lineage_recovery_XXX.img>
 "
-fastboot flash recovery lineage-17.1-20201106-recovery.img
+fastboot flash recovery $RELSEL_DIR/lineage-17.1-$RELDATE-recovery.img
 
 echo "
 
-> Run <fastboot reboot recovery> to reboot into the newly-installed LineageOS Recovery
+> Running <fastboot reboot> to reboot
 "
-fastboot reboot recovery
+fastboot reboot
 
+echo "
+
+> Wait for the device to reboot.
+"
+read -p "When done, hit ENTER..." dummyvar
+
+echo "
+
+> Running <adb reboot recovery> to reboot into the newly-installed LineageOS Recovery
+"
+adb reboot recovery
 
 echo "
 ==============================
@@ -115,7 +154,7 @@ echo "
 
 > Run <adb sideload lineage-17.1-20201031-UNOFFICIAL-Atom_L.zip> from your PC
 "
-adb sideload lineage-17.1-20201106-UNOFFICIAL-Atom_L.zip
+adb sideload $RELSEL_DIR/lineage-17.1-$RELDATE-UNOFFICIAL-Atom_L.zip
 
 echo "
 Wait for the process to finish. (The recovery might prompt something about verification failure, just ignore

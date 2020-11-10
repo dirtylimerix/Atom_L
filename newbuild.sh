@@ -1,5 +1,27 @@
 #!/bin/bash
 
+echo "WARNING!!!
+You are solely responsible for what you do with this script and the files included with it.
+I hold no responsibility and make no guarantees about how this may affect your devices.
+WARNING!!!
+
+"
+
+echo "
+==============================
+       GET LATEST ROM
+==============================
+
+
+Please download the latest ROM from Unihertz' Google Drive (https://drive.google.com/drive/folders/0By1nhWOmuw2KdDhTUlFOZHpXQjg?sort=13&direction=a)
+
+Then place the file in this directory and rename it to latest_ROM.zip
+
+"
+
+read -p "When done, hit ENTER..." dummyvar
+
+
 export TOP_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 export BUILD_DIR=$TOP_DIR/build
 export LINEAGE_DIR=$BUILD_DIR/android/lineage
@@ -54,8 +76,8 @@ DATEVAL=`ls lineage-17.1-*-UNOFFICIAL-Atom_L.zip | awk -F '[-.]' '{print $4}'`
 cd $TOP_DIR
 
 mkdir $TOP_DIR/releases/$DATEVAL
-cp $LINEAGE_DIR/out/target/product/Atom_L/lineage-17.1-$DATEVAL-UNOFFICIAL-Atom_L.zip $TOP_DIR/releases/$DATEVAL
-cp $LINEAGE_DIR/out/target/product/Atom_L/lineage-17.1-$DATEVAL-UNOFFICIAL-Atom_L.zip.md5sum $TOP_DIR/releases/$DATEVAL
-cp $LINEAGE_DIR/out/target/product/Atom_L/recovery.img $TOP_DIR/releases/$DATEVAL/lineage-17.1-$DATEVAL-recovery.img
+mv $LINEAGE_DIR/out/target/product/Atom_L/lineage-17.1-$DATEVAL-UNOFFICIAL-Atom_L.zip $TOP_DIR/releases/$DATEVAL
+mv $LINEAGE_DIR/out/target/product/Atom_L/lineage-17.1-$DATEVAL-UNOFFICIAL-Atom_L.zip.md5sum $TOP_DIR/releases/$DATEVAL
+mv $LINEAGE_DIR/out/target/product/Atom_L/recovery.img $TOP_DIR/releases/$DATEVAL/lineage-17.1-$DATEVAL-recovery.img
 
 

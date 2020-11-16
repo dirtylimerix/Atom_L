@@ -22,14 +22,15 @@ Then place the file in this directory and rename it to latest_ROM.zip
 read -p "When done, hit ENTER..." dummyvar
 
 
-export TOP_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+export SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+export TOP_DIR=$SCRIPT_DIR/..
 export BUILD_DIR=$TOP_DIR/build
 export LINEAGE_DIR=$BUILD_DIR/android/lineage
 export LOCAL_MANIFEST_DIR=$LINEAGE_DIR/.repo/local_manifests
 export VENDOR_DIR=$BUILD_DIR/unihertz
 export TARGET_DIR=$LINEAGE_DIR/out/target/product/Atom_L
 
-source $TOP_DIR/profile.sh
+source $TOP_DIR/scripts/profile.sh
 
 rm -rf $BUILD_DIR
 mkdir -p $BUILD_DIR

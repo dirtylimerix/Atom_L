@@ -7,7 +7,8 @@ WARNING!!!
 
 "
 
-export TOP_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+export SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+export TOP_DIR=$SCRIPT_DIR/..
 export RELEASE_DIR=$TOP_DIR/releases
 
 idx=0

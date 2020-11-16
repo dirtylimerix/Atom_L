@@ -1,11 +1,12 @@
 #!/bin/bash
 
-export TOP_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+export SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+export TOP_DIR=$SCRIPT_DIR/..
 export BUILD_DIR=$TOP_DIR/build
 export LINEAGE_DIR=$BUILD_DIR/android/lineage
 export TARGET_DIR=$LINEAGE_DIR/out/target/product/Atom_L
 
-source $TOP_DIR/profile.sh
+source $TOP_DIR/scripts/profile.sh
 
 cd $LINEAGE_DIR
 repo sync --force-sync

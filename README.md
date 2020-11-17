@@ -18,12 +18,9 @@ The Unihertz Atom L (codenamed simply _"Atom_L"_) is a rugged small smartphone f
 | Camera (Rear - Main)    | 48MP                                                                                                                           |
 | Camera (Front)          | 8MP                                                                                                                            |
 
-## Special Thanks To
+## Scripts
 
-- [PeterCxy from the XDA forum](https://forum.xda-developers.com/member.php?u=5351691) for helping me and providing the device tree for Atom L.
-- [The device tree for the Atom L](https://cgit.typeblog.net/android/device/unihertz/Atom_L/)
-- [a-dead-trousers from the XDA forum](https://forum.xda-developers.com/member.php?u=7624432) for a similar effort on the Atom XL and most of the documentation you see in this repo. 
-- [The device tree for the Atom XL](https://github.com/ADeadTrousers/android_device_Unihertz_Atom_XL)
+The _scripts_ subdirectory and _tools_ subdirectory are not part of the actual device tree. _tools_ contains the latest _imjtool_ and _repo_ binaries for convenience, and the _scripts_ subdirectory contains a number of helpful bash scripts for doing new builds, updating a build, deploying a release to a device, etc. Although they should work in any Linux environment, these scripts were only tested under my personal Ubuntu 18.04 environment, and so I make no guarantees about them working for you, but they contain some documentation and good examples of the workflows needed to use this repository. 
 
 ## Documentations
 
@@ -33,6 +30,12 @@ The Unihertz Atom L (codenamed simply _"Atom_L"_) is a rugged small smartphone f
 - [HOW-TO-EXTRACT_FILES.md](https://github.com/jamesbrock0/Atom_L/blob/master/docs/HOW-TO-EXTRACT_FILES.md) - Instructions to extract files directly from the Atom XL stock rom files.
 
 
+## Special Thanks To
+
+- [PeterCxy from the XDA forum](https://forum.xda-developers.com/member.php?u=5351691) for helping me and providing the device tree for Atom L.
+- [The device tree for the Atom L](https://cgit.typeblog.net/android/device/unihertz/Atom_L/)
+- [a-dead-trousers from the XDA forum](https://forum.xda-developers.com/member.php?u=7624432) for a similar effort on the Atom XL and most of the documentation you see in this repo. 
+- [The device tree for the Atom XL](https://github.com/ADeadTrousers/android_device_Unihertz_Atom_XL)
 
 
 
